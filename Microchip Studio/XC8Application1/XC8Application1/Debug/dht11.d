@@ -1,5 +1,4 @@
-main.d main.o: .././main.c \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\interrupt.h \
+dht11.d dht11.o: .././dht11.c .././dht11.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\inttypes.h \
@@ -15,10 +14,9 @@ main.d main.o: .././main.c \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\lock.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h \
- .././dht11.h
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h
 
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\interrupt.h:
+.././dht11.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h:
 
@@ -51,5 +49,3 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay.h:
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h:
-
-.././dht11.h:

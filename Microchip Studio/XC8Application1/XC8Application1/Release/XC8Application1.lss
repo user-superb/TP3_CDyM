@@ -1,0 +1,331 @@
+
+XC8Application1.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  0000026a  2**0
+                  ALLOC, LOAD, DATA
+  1 .text         000000be  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      0000002f  00000000  00000000  0000026a  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  00000299  2**0
+                  CONTENTS, READONLY
+  4 .debug_info   000005f4  00000000  00000000  000002a7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_abbrev 000005a2  00000000  00000000  0000089b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_line   00000137  00000000  00000000  00000e3d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_str    00000208  00000000  00000000  00000f74  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .text         00000002  000001c8  000001c8  0000025c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  9 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000117c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .text.request 00000022  000001a6  000001a6  0000023a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 11 .text.check_response 00000026  00000180  00000180  00000214  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 12 .text.read_byte 00000024  0000015c  0000015c  000001f0  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .text.__vector_11 0000000c  000001ca  000001ca  0000025e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 14 .text.startup.main 00000088  000000cc  000000cc  00000160  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .bss.flag_1seg 00000001  00800100  00800100  0000026a  2**0
+                  ALLOC
+ 16 .text.__dummy_fini 00000002  00000154  00000154  000001e8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.__dummy_funcs_on_exit 00000002  0000015a  0000015a  000001ee  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.__dummy_simulator_exit 00000002  00000156  00000156  000001ea  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.exit    0000000e  000000be  000000be  00000152  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text._Exit   00000002  00000158  00000158  000001ec  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	36 c0       	rjmp	.+108    	; 0x6e <__ctors_end>
+   2:	00 00       	nop
+   4:	e1 c0       	rjmp	.+450    	; 0x1c8 <__bad_interrupt>
+   6:	00 00       	nop
+   8:	df c0       	rjmp	.+446    	; 0x1c8 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	dd c0       	rjmp	.+442    	; 0x1c8 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	db c0       	rjmp	.+438    	; 0x1c8 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	d9 c0       	rjmp	.+434    	; 0x1c8 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	d7 c0       	rjmp	.+430    	; 0x1c8 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	d5 c0       	rjmp	.+426    	; 0x1c8 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	d3 c0       	rjmp	.+422    	; 0x1c8 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	d1 c0       	rjmp	.+418    	; 0x1c8 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	cf c0       	rjmp	.+414    	; 0x1c8 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	ce c0       	rjmp	.+412    	; 0x1ca <__vector_11>
+  2e:	00 00       	nop
+  30:	cb c0       	rjmp	.+406    	; 0x1c8 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	c9 c0       	rjmp	.+402    	; 0x1c8 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	c7 c0       	rjmp	.+398    	; 0x1c8 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	c5 c0       	rjmp	.+394    	; 0x1c8 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	c3 c0       	rjmp	.+390    	; 0x1c8 <__bad_interrupt>
+  42:	00 00       	nop
+  44:	c1 c0       	rjmp	.+386    	; 0x1c8 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	bf c0       	rjmp	.+382    	; 0x1c8 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	bd c0       	rjmp	.+378    	; 0x1c8 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	bb c0       	rjmp	.+374    	; 0x1c8 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	b9 c0       	rjmp	.+370    	; 0x1c8 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	b7 c0       	rjmp	.+366    	; 0x1c8 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	b5 c0       	rjmp	.+362    	; 0x1c8 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	b3 c0       	rjmp	.+358    	; 0x1c8 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	b1 c0       	rjmp	.+354    	; 0x1c8 <__bad_interrupt>
+	...
+
+00000068 <.dinit>:
+  68:	01 00       	.word	0x0001	; ????
+  6a:	01 01       	movw	r0, r2
+  6c:	80 00       	.word	0x0080	; ????
+
+0000006e <__ctors_end>:
+  6e:	11 24       	eor	r1, r1
+  70:	1f be       	out	0x3f, r1	; 63
+  72:	cf ef       	ldi	r28, 0xFF	; 255
+  74:	d8 e0       	ldi	r29, 0x08	; 8
+  76:	de bf       	out	0x3e, r29	; 62
+  78:	cd bf       	out	0x3d, r28	; 61
+
+0000007a <__do_copy_data>:
+  7a:	e8 e6       	ldi	r30, 0x68	; 104
+  7c:	f0 e0       	ldi	r31, 0x00	; 0
+  7e:	40 e0       	ldi	r20, 0x00	; 0
+  80:	17 c0       	rjmp	.+46     	; 0xb0 <__do_clear_bss+0x8>
+  82:	b5 91       	lpm	r27, Z+
+  84:	a5 91       	lpm	r26, Z+
+  86:	35 91       	lpm	r19, Z+
+  88:	25 91       	lpm	r18, Z+
+  8a:	05 91       	lpm	r16, Z+
+  8c:	07 fd       	sbrc	r16, 7
+  8e:	0c c0       	rjmp	.+24     	; 0xa8 <__do_clear_bss>
+  90:	95 91       	lpm	r25, Z+
+  92:	85 91       	lpm	r24, Z+
+  94:	ef 01       	movw	r28, r30
+  96:	f9 2f       	mov	r31, r25
+  98:	e8 2f       	mov	r30, r24
+  9a:	05 90       	lpm	r0, Z+
+  9c:	0d 92       	st	X+, r0
+  9e:	a2 17       	cp	r26, r18
+  a0:	b3 07       	cpc	r27, r19
+  a2:	d9 f7       	brne	.-10     	; 0x9a <__do_copy_data+0x20>
+  a4:	fe 01       	movw	r30, r28
+  a6:	04 c0       	rjmp	.+8      	; 0xb0 <__do_clear_bss+0x8>
+
+000000a8 <__do_clear_bss>:
+  a8:	1d 92       	st	X+, r1
+  aa:	a2 17       	cp	r26, r18
+  ac:	b3 07       	cpc	r27, r19
+  ae:	e1 f7       	brne	.-8      	; 0xa8 <__do_clear_bss>
+  b0:	ed 36       	cpi	r30, 0x6D	; 109
+  b2:	f4 07       	cpc	r31, r20
+  b4:	31 f7       	brne	.-52     	; 0x82 <__do_copy_data+0x8>
+  b6:	0a d0       	rcall	.+20     	; 0xcc <main>
+  b8:	02 c0       	rjmp	.+4      	; 0xbe <_etext>
+
+000000ba <_exit>:
+  ba:	f8 94       	cli
+
+000000bc <__stop_program>:
+  bc:	ff cf       	rjmp	.-2      	; 0xbc <__stop_program>
+
+Disassembly of section .text:
+
+000001c8 <__bad_interrupt>:
+ 1c8:	1b cf       	rjmp	.-458    	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.request:
+
+000001a6 <request>:
+ 1a6:	38 9a       	sbi	0x07, 0	; 7
+ 1a8:	40 98       	cbi	0x08, 0	; 8
+ 1aa:	2f ef       	ldi	r18, 0xFF	; 255
+ 1ac:	80 ee       	ldi	r24, 0xE0	; 224
+ 1ae:	90 e0       	ldi	r25, 0x00	; 0
+ 1b0:	21 50       	subi	r18, 0x01	; 1
+ 1b2:	80 40       	sbci	r24, 0x00	; 0
+ 1b4:	90 40       	sbci	r25, 0x00	; 0
+ 1b6:	e1 f7       	brne	.-8      	; 0x1b0 <request+0xa>
+ 1b8:	00 c0       	rjmp	.+0      	; 0x1ba <request+0x14>
+ 1ba:	00 00       	nop
+ 1bc:	40 9a       	sbi	0x08, 0	; 8
+ 1be:	20 ea       	ldi	r18, 0xA0	; 160
+ 1c0:	2a 95       	dec	r18
+ 1c2:	f1 f7       	brne	.-4      	; 0x1c0 <request+0x1a>
+ 1c4:	38 98       	cbi	0x07, 0	; 7
+ 1c6:	08 95       	ret
+
+Disassembly of section .text.check_response:
+
+00000180 <check_response>:
+ 180:	85 ed       	ldi	r24, 0xD5	; 213
+ 182:	8a 95       	dec	r24
+ 184:	f1 f7       	brne	.-4      	; 0x182 <check_response+0x2>
+ 186:	00 00       	nop
+ 188:	30 9b       	sbis	0x06, 0	; 6
+ 18a:	02 c0       	rjmp	.+4      	; 0x190 <check_response+0x10>
+ 18c:	80 e0       	ldi	r24, 0x00	; 0
+ 18e:	08 95       	ret
+ 190:	8f e3       	ldi	r24, 0x3F	; 63
+ 192:	91 e0       	ldi	r25, 0x01	; 1
+ 194:	01 97       	sbiw	r24, 0x01	; 1
+ 196:	f1 f7       	brne	.-4      	; 0x194 <check_response+0x14>
+ 198:	00 c0       	rjmp	.+0      	; 0x19a <check_response+0x1a>
+ 19a:	00 00       	nop
+ 19c:	86 b1       	in	r24, 0x06	; 6
+ 19e:	81 70       	andi	r24, 0x01	; 1
+ 1a0:	30 99       	sbic	0x06, 0	; 6
+ 1a2:	fe cf       	rjmp	.-4      	; 0x1a0 <check_response+0x20>
+ 1a4:	08 95       	ret
+
+Disassembly of section .text.read_byte:
+
+0000015c <read_byte>:
+ 15c:	28 e0       	ldi	r18, 0x08	; 8
+ 15e:	30 e0       	ldi	r19, 0x00	; 0
+ 160:	80 e0       	ldi	r24, 0x00	; 0
+ 162:	30 9b       	sbis	0x06, 0	; 6
+ 164:	fe cf       	rjmp	.-4      	; 0x162 <read_byte+0x6>
+ 166:	90 ea       	ldi	r25, 0xA0	; 160
+ 168:	9a 95       	dec	r25
+ 16a:	f1 f7       	brne	.-4      	; 0x168 <read_byte+0xc>
+ 16c:	88 0f       	add	r24, r24
+ 16e:	30 9b       	sbis	0x06, 0	; 6
+ 170:	03 c0       	rjmp	.+6      	; 0x178 <read_byte+0x1c>
+ 172:	81 60       	ori	r24, 0x01	; 1
+ 174:	30 99       	sbic	0x06, 0	; 6
+ 176:	fe cf       	rjmp	.-4      	; 0x174 <read_byte+0x18>
+ 178:	21 50       	subi	r18, 0x01	; 1
+ 17a:	31 09       	sbc	r19, r1
+ 17c:	91 f7       	brne	.-28     	; 0x162 <read_byte+0x6>
+ 17e:	08 95       	ret
+
+Disassembly of section .text.__vector_11:
+
+000001ca <__vector_11>:
+ 1ca:	8f 93       	push	r24
+ 1cc:	81 e0       	ldi	r24, 0x01	; 1
+ 1ce:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 1d2:	8f 91       	pop	r24
+ 1d4:	18 95       	reti
+
+Disassembly of section .text.startup.main:
+
+000000cc <main>:
+  cc:	80 91 b9 00 	lds	r24, 0x00B9	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7f80b9>
+  d0:	8c 7f       	andi	r24, 0xFC	; 252
+  d2:	80 93 b9 00 	sts	0x00B9, r24	; 0x8000b9 <__TEXT_REGION_LENGTH__+0x7f80b9>
+  d6:	88 e4       	ldi	r24, 0x48	; 72
+  d8:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <__TEXT_REGION_LENGTH__+0x7f80b8>
+  dc:	84 e0       	ldi	r24, 0x04	; 4
+  de:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+  e2:	80 91 81 00 	lds	r24, 0x0081	; 0x800081 <__TEXT_REGION_LENGTH__+0x7f8081>
+  e6:	8c 60       	ori	r24, 0x0C	; 12
+  e8:	80 93 81 00 	sts	0x0081, r24	; 0x800081 <__TEXT_REGION_LENGTH__+0x7f8081>
+  ec:	83 e2       	ldi	r24, 0x23	; 35
+  ee:	94 ef       	ldi	r25, 0xF4	; 244
+  f0:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7f8089>
+  f4:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7f8088>
+  f8:	80 91 6f 00 	lds	r24, 0x006F	; 0x80006f <__TEXT_REGION_LENGTH__+0x7f806f>
+  fc:	82 60       	ori	r24, 0x02	; 2
+  fe:	80 93 6f 00 	sts	0x006F, r24	; 0x80006f <__TEXT_REGION_LENGTH__+0x7f806f>
+ 102:	78 94       	sei
+ 104:	56 9a       	sbi	0x0a, 6	; 10
+ 106:	57 9a       	sbi	0x0a, 7	; 10
+ 108:	01 c0       	rjmp	.+2      	; 0x10c <main+0x40>
+ 10a:	5f 9a       	sbi	0x0b, 7	; 11
+ 10c:	2f ef       	ldi	r18, 0xFF	; 255
+ 10e:	83 ed       	ldi	r24, 0xD3	; 211
+ 110:	90 e3       	ldi	r25, 0x30	; 48
+ 112:	21 50       	subi	r18, 0x01	; 1
+ 114:	80 40       	sbci	r24, 0x00	; 0
+ 116:	90 40       	sbci	r25, 0x00	; 0
+ 118:	e1 f7       	brne	.-8      	; 0x112 <main+0x46>
+ 11a:	00 c0       	rjmp	.+0      	; 0x11c <main+0x50>
+ 11c:	00 00       	nop
+ 11e:	43 d0       	rcall	.+134    	; 0x1a6 <request>
+ 120:	2f d0       	rcall	.+94     	; 0x180 <check_response>
+ 122:	81 30       	cpi	r24, 0x01	; 1
+ 124:	91 f7       	brne	.-28     	; 0x10a <main+0x3e>
+ 126:	1a d0       	rcall	.+52     	; 0x15c <read_byte>
+ 128:	08 2f       	mov	r16, r24
+ 12a:	18 d0       	rcall	.+48     	; 0x15c <read_byte>
+ 12c:	c8 2f       	mov	r28, r24
+ 12e:	16 d0       	rcall	.+44     	; 0x15c <read_byte>
+ 130:	18 2f       	mov	r17, r24
+ 132:	14 d0       	rcall	.+40     	; 0x15c <read_byte>
+ 134:	d8 2f       	mov	r29, r24
+ 136:	12 d0       	rcall	.+36     	; 0x15c <read_byte>
+ 138:	2c 2f       	mov	r18, r28
+ 13a:	30 e0       	ldi	r19, 0x00	; 0
+ 13c:	20 0f       	add	r18, r16
+ 13e:	31 1d       	adc	r19, r1
+ 140:	21 0f       	add	r18, r17
+ 142:	31 1d       	adc	r19, r1
+ 144:	2d 0f       	add	r18, r29
+ 146:	31 1d       	adc	r19, r1
+ 148:	90 e0       	ldi	r25, 0x00	; 0
+ 14a:	28 17       	cp	r18, r24
+ 14c:	39 07       	cpc	r19, r25
+ 14e:	f1 f6       	brne	.-68     	; 0x10c <main+0x40>
+ 150:	5e 9a       	sbi	0x0b, 6	; 11
+ 152:	dc cf       	rjmp	.-72     	; 0x10c <main+0x40>
+
+Disassembly of section .text.__dummy_fini:
+
+00000154 <_fini>:
+ 154:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+0000015a <__funcs_on_exit>:
+ 15a:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+00000156 <__simulator_exit>:
+ 156:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+000000be <exit>:
+  be:	ec 01       	movw	r28, r24
+  c0:	4c d0       	rcall	.+152    	; 0x15a <__funcs_on_exit>
+  c2:	48 d0       	rcall	.+144    	; 0x154 <_fini>
+  c4:	ce 01       	movw	r24, r28
+  c6:	47 d0       	rcall	.+142    	; 0x156 <__simulator_exit>
+  c8:	ce 01       	movw	r24, r28
+  ca:	46 d0       	rcall	.+140    	; 0x158 <_Exit>
+
+Disassembly of section .text._Exit:
+
+00000158 <_Exit>:
+ 158:	b0 df       	rcall	.-160    	; 0xba <_exit>
