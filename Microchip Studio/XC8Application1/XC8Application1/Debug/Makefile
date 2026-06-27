@@ -37,6 +37,7 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../comandos.c \
 ../i2c.c \
 ../dht11.c \
 ../main.c \
@@ -53,6 +54,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+comandos.o \
 i2c.o \
 dht11.o \
 main.o \
@@ -62,6 +64,7 @@ timer1.o \
 uart.o
 
 OBJS_AS_ARGS +=  \
+comandos.o \
 i2c.o \
 dht11.o \
 main.o \
@@ -71,6 +74,7 @@ timer1.o \
 uart.o
 
 C_DEPS +=  \
+comandos.d \
 i2c.d \
 dht11.d \
 main.d \
@@ -80,6 +84,7 @@ timer1.d \
 uart.d
 
 C_DEPS_AS_ARGS +=  \
+comandos.d \
 i2c.d \
 dht11.d \
 main.d \
@@ -102,6 +107,13 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
+./comandos.o: .././comandos.c
+	@echo Building file: $<
+	@echo Invoking: XC8 C Compiler : 2.36
+	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega328P  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega328P__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
 ./i2c.o: .././i2c.c
 	@echo Building file: $<
 	@echo Invoking: XC8 C Compiler : 2.36

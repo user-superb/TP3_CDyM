@@ -12,6 +12,7 @@
 #include "reloj.h"
 #include "uart.h"
 #include "monitor.h"
+#include "comandos.h"
 
 
 // Vel. del relojo de I2C
@@ -28,13 +29,7 @@ int main(void)
 		reloj_foreground();
 		monitor_procesar_telemetria();
 		if (rx_ready == 1) {
-			// Ejemplo: si te mandan un comando por consola
-			// Podés hacer un strcmp(rx_buffer, "TEMP") o similar.
-			
-			uart_send_string("Comando recibido: ");
-			uart_send_string((char*)rx_buffer);
-			uart_send_string("\r\n");
-
+			procesar_comando((char*)rx_buffer);
 			rx_ready = 0; // Bajamos la bandera para esperar el próximo comando
 		}
     }
