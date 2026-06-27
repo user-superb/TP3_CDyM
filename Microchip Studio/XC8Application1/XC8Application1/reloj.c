@@ -6,79 +6,47 @@
  */ 
 
 #include "reloj.h"
+#include "timer1.h"
+#include "i2c.h"
 
-void I2C_Stop(void) {
-	// Transmitir condición de STOP
-	TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWSTO);
-}
-
-void I2C_Write(uint8_t data) {
-	// Cargar el dato en el registro de datos
-	TWDR = data;
-	// Iniciar transmisión
-	TWCR = (1 << TWINT) | (1 << TWEN);
-	// Esperar a que termine de transmitir
-	while ((TWCR & (1 << TWINT)) == 0);
-}
-
-void I2C_Init(void) {
-	// Se ponen los bits TWPS0 y TWPS1 en 0 dentro del registro TWSR.
-	TWSR &= ~((1 << TWPS1) | (1 << TWPS0));
-
-	// Configurar el Bit Rate Register (TWBR).
-	TWBR = (uint8_t)(((F_CPU / SCL_CLOCK) - 16) / 2);
-
-	// Habilitar el módulo TWI.
-	TWCR = (1 << TWEN);
-}
-
-void I2C_Start(void) {
-	TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
-	while ((TWCR & (1 << TWINT)) == 0);
-}
-
-uint8_t I2C_Read() {
-	// Iniciar recepción sin devolver ACK
-	TWCR = (1 << TWINT) | (1 << TWEN);
-	// Esperar a recibir el dato
-	while ((TWCR & (1 << TWINT)) == 0);
-	return TWDR;
-}
-
-// Variable global para comunicar el Background con el Foreground
-volatile uint8_t flag_1seg = 0;
-
-void Timer1_Init(void) {
-	TCCR1B |= (1 << WGM12) | (1 << CS12);
-	OCR1A = 62499;
-	TIMSK1 |= (1 << OCIE1A);
-}
-
-// Rutina de Servicio de Interrupción
-ISR(TIMER1_COMPA_vect) {
-	flag_1seg = 1; // Se levanta la bandera
-}
+volatile uint8_t seg_dec	= 0;
+volatile uint8_t min_dec	= 0;
+volatile uint8_t horas_dec	= 0;
 
 void init_reloj(void) {
 	I2C_Init();
 	Timer1_Init();
 }
 
-char tarea_foreground(void) {
-	static uint8_t segundos_raw;
+void reloj_foreground(void) {
+	static uint8_t	seg_raw = 0,
+					min_raw	= 0,
+					horas_raw = 0;
+					
 	if (flag_1seg == 1) {
 		flag_1seg = 0;
 		
+		// Se apunta al registro 0x00 (Segundos)
 		I2C_Start();
 		I2C_Write(0xD0);
 		I2C_Write(0x00);
 		
+		// Se cambia al modo lectura (Repeated Start)
 		I2C_Start();
 		I2C_Write(0xD1);
 		
-		segundos_raw = I2C_Read(1); // Leer el dato
+		seg_raw = I2C_Read_Ack();  // Lee 0x00
+		min_raw  = I2C_Read_Ack();  // Lee 0x01
+		horas_raw    = I2C_Read_Nack(); // Lee 0x02
+		
 		I2C_Stop();
+		
+		// CONVERSIÓN DE BCD A DECIMAL
+		// Se tiene que los números estarán guardados de tal forma que los 4 bits altos son las decenas y los 4 bits bajos son las unidades.
+		seg_dec = ((seg_raw >> 4) & 0x0F) * 10 + (seg_raw & 0x0F);
+		min_dec = ((min_raw >> 4) & 0x0F) * 10  + (min_raw & 0x0F);
+		
+		// En el registro de horas, los bits 4 y 5 son las decenas. (El bit 6 es el formato 12/24h)
+		horas_dec = ((horas_raw >> 4) & 0x03) * 10 + (horas_raw & 0x0F);
 	}
-	
-	return flag_1seg;
 }

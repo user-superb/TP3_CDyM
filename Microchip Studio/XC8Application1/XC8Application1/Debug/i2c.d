@@ -1,4 +1,5 @@
-reloj.d reloj.o: .././reloj.c .././reloj.h .././timer1.h \
+i2c.d i2c.o: .././i2c.c .././i2c.h \
+ c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\interrupt.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\inttypes.h \
@@ -9,13 +10,11 @@ reloj.d reloj.o: .././reloj.c .././reloj.h .././timer1.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\common.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\version.h \
  c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\fuse.h \
- c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\lock.h \
- c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\interrupt.h \
- .././i2c.h
+ c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\lock.h
 
-.././reloj.h:
+.././i2c.h:
 
-.././timer1.h:
+c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\interrupt.h:
 
 c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\io.h:
 
@@ -38,7 +37,3 @@ c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\version.h:
 c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\fuse.h:
 
 c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\lock.h:
-
-c:\program\ files\microchip\xc8\v2.31\avr\avr\include\avr\interrupt.h:
-
-.././i2c.h:

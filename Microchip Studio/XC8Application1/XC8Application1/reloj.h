@@ -9,22 +9,15 @@
 #ifndef RELOJ_H_
 #define RELOJ_H_
 
-#include <avr/interrupt.h>
+#include <avr/io.h>
 
-// Vel. del relojo de I2C
-#define SCL_CLOCK 100000L
-#define F_CPU 16000000UL
+// Las hice variables globales cosa de poder verlas en el debugger del proteus
+extern volatile uint8_t	seg_dec;
+extern volatile uint8_t	min_dec;
+extern volatile uint8_t	horas_dec;
 
-void I2C_Stop(void);
-void I2C_Write(uint8_t data);
-void I2C_Init(void);
-void I2C_Start(void);
-uint8_t I2C_Read();
 void Timer1_Init(void);
-
 void init_reloj(void);
-char tarea_foreground(void);
-
-
+void reloj_foreground(void);
 
 #endif /* RELOJ_H_ */

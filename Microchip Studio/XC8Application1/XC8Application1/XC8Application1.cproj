@@ -104,10 +104,16 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="i2c.c">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="dht11.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="dht11.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="i2c.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="main.c">
@@ -117,6 +123,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="reloj.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="timer1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="timer1.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

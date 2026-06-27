@@ -2,7 +2,13 @@
 # Automatically-generated file. Do not edit or delete the file
 ################################################################################
 
+i2c.c
+
 dht11.c
 
 main.c
+
+reloj.c
+
+timer1.c
 
