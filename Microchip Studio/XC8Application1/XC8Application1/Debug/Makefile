@@ -40,6 +40,7 @@ C_SRCS +=  \
 ../i2c.c \
 ../dht11.c \
 ../main.c \
+../monitor.c \
 ../reloj.c \
 ../timer1.c \
 ../uart.c
@@ -55,6 +56,7 @@ OBJS +=  \
 i2c.o \
 dht11.o \
 main.o \
+monitor.o \
 reloj.o \
 timer1.o \
 uart.o
@@ -63,6 +65,7 @@ OBJS_AS_ARGS +=  \
 i2c.o \
 dht11.o \
 main.o \
+monitor.o \
 reloj.o \
 timer1.o \
 uart.o
@@ -71,6 +74,7 @@ C_DEPS +=  \
 i2c.d \
 dht11.d \
 main.d \
+monitor.d \
 reloj.d \
 timer1.d \
 uart.d
@@ -79,6 +83,7 @@ C_DEPS_AS_ARGS +=  \
 i2c.d \
 dht11.d \
 main.d \
+monitor.d \
 reloj.d \
 timer1.d \
 uart.d
@@ -112,6 +117,13 @@ LINKER_SCRIPT_DEP+=
 	
 
 ./main.o: .././main.c
+	@echo Building file: $<
+	@echo Invoking: XC8 C Compiler : 2.36
+	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega328P  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega328P__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
+	@echo Finished building: $<
+	
+
+./monitor.o: .././monitor.c
 	@echo Building file: $<
 	@echo Invoking: XC8 C Compiler : 2.36
 	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega328P  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega328P__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 

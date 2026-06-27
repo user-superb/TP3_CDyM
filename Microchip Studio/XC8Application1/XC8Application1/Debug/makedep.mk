@@ -8,6 +8,8 @@ dht11.c
 
 main.c
 
+monitor.c
+
 reloj.c
 
 timer1.c

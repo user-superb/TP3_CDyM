@@ -5,6 +5,28 @@
 
 #define T_RL 18 //Tiempo low para hacer el request (Time request low) en ms.
 #define T_RH 30 //Tiempo en high para hacer el request (Time request high) en us.
+
+uint8_t dht11_read_data(uint8_t *temp, uint8_t *hum) {
+	uint8_t h_int, h_dec, t_int, t_dec, chk;
+	
+	request(); // Enviamos el pulso de inicio
+	
+	if (check_response()) { // Si el sensor responde
+		h_int = read_byte();
+		h_dec = read_byte();
+		t_int = read_byte();
+		t_dec = read_byte();
+		chk = read_byte();
+		
+		// Verificamos el checksum sumando los 4 primeros bytes
+		if (chk == (uint8_t)(h_int + h_dec + t_int + t_dec)) {
+			*hum = h_int;
+			*temp = t_int;
+			return 1; // Lectura exitosa
+		}
+	}
+	return 0; // Error de lectura o sensor desconectado
+}
 void request(void)
 {
 	DDRC |= (1 << PORTC0); //inicializar como salida.

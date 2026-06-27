@@ -119,6 +119,12 @@
     <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="monitor.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="monitor.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="reloj.c">
       <SubType>compile</SubType>
     </Compile>

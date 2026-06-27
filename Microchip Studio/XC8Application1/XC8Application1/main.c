@@ -11,6 +11,7 @@
 #include "dht11.h"
 #include "reloj.h"
 #include "uart.h"
+#include "monitor.h"
 
 
 // Vel. del relojo de I2C
@@ -25,6 +26,7 @@ int main(void)
 	while(1)
     {		
 		reloj_foreground();
+		monitor_procesar_telemetria();
 		if (rx_ready == 1) {
 			// Ejemplo: si te mandan un comando por consola
 			// Podés hacer un strcmp(rx_buffer, "TEMP") o similar.
