@@ -1,5 +1,4 @@
-i2c.d i2c.o: .././i2c.c .././i2c.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\interrupt.h \
+uart.d uart.o: .././uart.c .././uart.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\sfr_defs.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\inttypes.h \
@@ -12,11 +11,10 @@ i2c.d i2c.o: .././i2c.c .././i2c.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\portpins.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\common.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\fuse.h \
- c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\lock.h
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\lock.h \
+ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\interrupt.h
 
-.././i2c.h:
-
-c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\interrupt.h:
+.././uart.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\io.h:
 
@@ -43,3 +41,5 @@ c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\common.h:
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\fuse.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\lock.h:
+
+c:\program\ files\microchip\xc8\v2.36\avr\avr\include\avr\interrupt.h:

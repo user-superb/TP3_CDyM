@@ -12,3 +12,5 @@ reloj.c
 
 timer1.c
 
+uart.c
+

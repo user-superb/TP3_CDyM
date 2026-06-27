@@ -3,102 +3,136 @@ XC8Application1.elf:     file format elf32-avr
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .data         00000000  00800100  00800100  00000298  2**0
+  0 .data         00000000  00800100  00800100  0000049c  2**0
                   ALLOC, LOAD, DATA
-  1 .text         000000c2  00000000  00000000  00000074  2**1
+  1 .text         000000c2  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .comment      0000002f  00000000  00000000  00000298  2**0
+  2 .bss          00000020  00800100  00800100  0000049c  2**0
+                  ALLOC
+  3 .comment      0000002f  00000000  00000000  0000049c  2**0
                   CONTENTS, READONLY
-  3 .debug_aranges 000000b8  00000000  00000000  000002c7  2**0
+  4 .stack.descriptors.hdr 0000000e  00000000  00000000  000004cb  2**0
+                  CONTENTS, READONLY
+  5 .debug_aranges 000000f0  00000000  00000000  000004d9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  4 .debug_info   000012a8  00000000  00000000  0000037f  2**0
+  6 .debug_info   0000181f  00000000  00000000  000005c9  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_abbrev 000007b4  00000000  00000000  00001627  2**0
+  7 .debug_abbrev 00000906  00000000  00000000  00001de8  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_line   00000491  00000000  00000000  00001ddb  2**0
+  8 .debug_line   00000681  00000000  00000000  000026ee  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_frame  00000110  00000000  00000000  0000226c  2**2
+  9 .debug_frame  000001b4  00000000  00000000  00002d70  2**2
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_str    00000271  00000000  00000000  0000237c  2**0
+ 10 .debug_str    0000028c  00000000  00000000  00002f24  2**0
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_loc    00000069  00000000  00000000  000025ed  2**0
+ 11 .debug_loc    000001de  00000000  00000000  000031b0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_ranges 00000078  00000000  00000000  00002656  2**0
+ 12 .debug_ranges 000000a0  00000000  00000000  0000338e  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .text         00000004  00000220  00000220  00000294  2**1
+ 13 .text         00000004  000003fa  000003fa  0000048e  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 12 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  000026d0  2**2
+ 14 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00003430  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .text.I2C_Stop 00000008  00000218  00000218  0000028c  2**1
+ 15 .text.I2C_Stop 00000008  000003f2  000003f2  00000486  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 14 .text.I2C_Write 00000014  000001b6  000001b6  0000022a  2**1
+ 16 .text.I2C_Write 00000014  00000388  00000388  0000041c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 15 .text.I2C_Init 00000018  0000019e  0000019e  00000212  2**1
+ 17 .text.I2C_Init 00000018  0000035a  0000035a  000003ee  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 16 .text.I2C_Start 00000010  000001f2  000001f2  00000266  2**1
+ 18 .text.I2C_Start 00000010  000003d8  000003d8  0000046c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 17 .text.I2C_Read_Nack 00000014  000001ca  000001ca  0000023e  2**1
+ 19 .text.I2C_Read_Nack 00000014  0000039c  0000039c  00000430  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 18 .text.I2C_Read_Ack 00000014  000001de  000001de  00000252  2**1
+ 20 .text.I2C_Read_Ack 00000014  000003b0  000003b0  00000444  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 19 .text.main    0000000c  00000202  00000202  00000276  2**1
+ 21 .progmemx.data 00000040  000000c2  000000c2  00000156  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, PROGMEMX
+ 22 .text.main    00000044  000002d6  000002d6  0000036a  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 20 .text.init_reloj 0000000a  0000020e  0000020e  00000282  2**1
+ 23 .text.init_reloj 0000000a  000003e8  000003e8  0000047c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 21 .text.reloj_foreground 0000009c  000000c2  000000c2  00000136  2**1
+ 24 .text.reloj_foreground 0000009c  00000102  00000102  00000196  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 22 .bss.horas_raw.1636 00000001  00800100  00800100  00000298  2**0
+ 25 .bss.horas_raw.1665 00000001  008001a0  008001a0  0000049c  2**0
                   ALLOC
- 23 .bss.min_raw.1635 00000001  00800101  00800101  00000298  2**0
+ 26 .bss.min_raw.1664 00000001  008001a1  008001a1  0000049c  2**0
                   ALLOC
- 24 .bss.seg_raw.1634 00000001  00800102  00800102  00000298  2**0
+ 27 .bss.seg_raw.1663 00000001  008001a2  008001a2  0000049c  2**0
                   ALLOC
- 25 .bss.horas_dec 00000001  00800103  00800103  00000298  2**0
+ 28 .bss.horas_dec 00000001  008001a3  008001a3  0000049c  2**0
                   ALLOC
- 26 .bss.min_dec  00000001  00800104  00800104  00000298  2**0
+ 29 .bss.min_dec  00000001  008001a4  008001a4  0000049c  2**0
                   ALLOC
- 27 .bss.seg_dec  00000001  00800105  00800105  00000298  2**0
+ 30 .bss.seg_dec  00000001  008001a5  008001a5  0000049c  2**0
                   ALLOC
- 28 .text.Timer1_Init 00000022  0000015e  0000015e  000001d2  2**1
+ 31 .text.Timer1_Init 00000022  0000031a  0000031a  000003ae  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 29 .text.__vector_11 0000001e  00000180  00000180  000001f4  2**1
+ 32 .text.__vector_11 0000001e  0000033c  0000033c  000003d0  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 30 .bss.flag_1seg 00000001  00800106  00800106  00000298  2**0
+ 33 .bss.flag_1seg 00000001  008001a6  008001a6  0000049c  2**0
                   ALLOC
+ 34 .text.uart_init 00000014  000003c4  000003c4  00000458  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 35 .text.uart_send_string 00000068  0000019e  0000019e  00000232  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 36 .text.__vector_18 00000068  00000206  00000206  0000029a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 37 .text.__vector_19 00000068  0000026e  0000026e  00000302  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 38 .bss.tx_tail  00000001  008001a7  008001a7  0000049c  2**0
+                  ALLOC
+ 39 .bss.tx_head  00000001  008001a8  008001a8  0000049c  2**0
+                  ALLOC
+ 40 .bss.tx_buffer 00000080  00800120  00800120  0000049c  2**0
+                  ALLOC
+ 41 .bss.rx_index 00000001  008001a9  008001a9  0000049c  2**0
+                  ALLOC
+ 42 .bss.rx_ready 00000001  008001aa  008001aa  0000049c  2**0
+                  ALLOC
+ 43 .text.__dummy_fini 00000002  00000402  00000402  00000496  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 44 .text.__dummy_funcs_on_exit 00000002  00000404  00000404  00000498  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 45 .text.__dummy_simulator_exit 00000002  00000406  00000406  0000049a  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 46 .text.exit    00000016  00000372  00000372  00000406  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 47 .text._Exit   00000004  000003fe  000003fe  00000492  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c 94 37 00 	jmp	0x6e	; 0x6e <__ctors_end>
-   4:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-   8:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-   c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  10:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  14:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  18:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  1c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  20:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  24:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  28:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  2c:	0c 94 c0 00 	jmp	0x180	; 0x180 <__vector_11>
-  30:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  34:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  38:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  3c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  40:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  44:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  48:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  4c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  50:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  54:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  58:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  5c:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  60:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
-  64:	0c 94 10 01 	jmp	0x220	; 0x220 <__bad_interrupt>
+   4:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+   8:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+   c:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  10:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  14:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  18:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  1c:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  20:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  24:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  28:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  2c:	0c 94 9e 01 	jmp	0x33c	; 0x33c <__vector_11>
+  30:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  34:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  38:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  3c:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  40:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  44:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  48:	0c 94 03 01 	jmp	0x206	; 0x206 <__vector_18>
+  4c:	0c 94 37 01 	jmp	0x26e	; 0x26e <__vector_19>
+  50:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  54:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  58:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  5c:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  60:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
+  64:	0c 94 fd 01 	jmp	0x3fa	; 0x3fa <__bad_interrupt>
 
 00000068 <.dinit>:
   68:	01 00       	.word	0x0001	; ????
-  6a:	01 07       	cpc	r16, r17
+  6a:	01 ab       	std	Z+49, r16	; 0x31
   6c:	80 00       	.word	0x0080	; ????
 
 0000006e <__ctors_end>:
@@ -142,8 +176,8 @@ Disassembly of section .text:
   b0:	ed 36       	cpi	r30, 0x6D	; 109
   b2:	f4 07       	cpc	r31, r20
   b4:	31 f7       	brne	.-52     	; 0x82 <__do_copy_data+0x8>
-  b6:	0e 94 01 01 	call	0x202	; 0x202 <main>
-  ba:	0c 94 5f 00 	jmp	0xbe	; 0xbe <_exit>
+  b6:	0e 94 6b 01 	call	0x2d6	; 0x2d6 <main>
+  ba:	0c 94 b9 01 	jmp	0x372	; 0x372 <exit>
 
 000000be <_exit>:
   be:	f8 94       	cli
@@ -153,292 +187,585 @@ Disassembly of section .text:
 
 Disassembly of section .text:
 
-00000220 <__bad_interrupt>:
- 220:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+000003fa <__bad_interrupt>:
+ 3fa:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
 
 Disassembly of section .text.I2C_Stop:
 
-00000218 <I2C_Stop>:
+000003f2 <I2C_Stop>:
 
 #include "i2c.h"
 
 void I2C_Stop(void) {
 	// Transmitir condición de STOP
 	TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWSTO);
- 218:	84 e9       	ldi	r24, 0x94	; 148
- 21a:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
- 21e:	08 95       	ret
+ 3f2:	84 e9       	ldi	r24, 0x94	; 148
+ 3f4:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 3f8:	08 95       	ret
 
 Disassembly of section .text.I2C_Write:
 
-000001b6 <I2C_Write>:
+00000388 <I2C_Write>:
 }
 
 void I2C_Write(uint8_t data) {
 	// Cargar el dato en el registro de datos
 	TWDR = data;
- 1b6:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 388:	80 93 bb 00 	sts	0x00BB, r24	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
 	// Iniciar transmisión
 	TWCR = (1 << TWINT) | (1 << TWEN);
- 1ba:	84 e8       	ldi	r24, 0x84	; 132
- 1bc:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 38c:	84 e8       	ldi	r24, 0x84	; 132
+ 38e:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
 	// Esperar a que termine de transmitir
 	while ((TWCR & (1 << TWINT)) == 0);
- 1c0:	80 91 bc 00 	lds	r24, 0x00BC	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
- 1c4:	88 23       	and	r24, r24
- 1c6:	e4 f7       	brge	.-8      	; 0x1c0 <I2C_Write+0xa>
+ 392:	80 91 bc 00 	lds	r24, 0x00BC	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 396:	88 23       	and	r24, r24
+ 398:	e4 f7       	brge	.-8      	; 0x392 <I2C_Write+0xa>
 }
- 1c8:	08 95       	ret
+ 39a:	08 95       	ret
 
 Disassembly of section .text.I2C_Init:
 
-0000019e <I2C_Init>:
+0000035a <I2C_Init>:
 
 void I2C_Init(void) {
 	// Se ponen los bits TWPS0 y TWPS1 en 0 dentro del registro TWSR.
 	TWSR &= ~((1 << TWPS1) | (1 << TWPS0));
- 19e:	e9 eb       	ldi	r30, 0xB9	; 185
- 1a0:	f0 e0       	ldi	r31, 0x00	; 0
- 1a2:	80 81       	ld	r24, Z
- 1a4:	8c 7f       	andi	r24, 0xFC	; 252
- 1a6:	80 83       	st	Z, r24
+ 35a:	e9 eb       	ldi	r30, 0xB9	; 185
+ 35c:	f0 e0       	ldi	r31, 0x00	; 0
+ 35e:	80 81       	ld	r24, Z
+ 360:	8c 7f       	andi	r24, 0xFC	; 252
+ 362:	80 83       	st	Z, r24
 
 	// Configurar el Bit Rate Register (TWBR).
 	TWBR = (uint8_t)(((F_CPU / SCL_CLOCK) - 16) / 2);
- 1a8:	88 e4       	ldi	r24, 0x48	; 72
- 1aa:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <__TEXT_REGION_LENGTH__+0x7f80b8>
+ 364:	88 e4       	ldi	r24, 0x48	; 72
+ 366:	80 93 b8 00 	sts	0x00B8, r24	; 0x8000b8 <__TEXT_REGION_LENGTH__+0x7f80b8>
 
 	// Habilitar el módulo TWI.
 	TWCR = (1 << TWEN);
- 1ae:	84 e0       	ldi	r24, 0x04	; 4
- 1b0:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
- 1b4:	08 95       	ret
+ 36a:	84 e0       	ldi	r24, 0x04	; 4
+ 36c:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 370:	08 95       	ret
 
 Disassembly of section .text.I2C_Start:
 
-000001f2 <I2C_Start>:
+000003d8 <I2C_Start>:
 }
 
 void I2C_Start(void) {
 	TWCR = (1 << TWINT) | (1 << TWSTA) | (1 << TWEN);
- 1f2:	84 ea       	ldi	r24, 0xA4	; 164
- 1f4:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 3d8:	84 ea       	ldi	r24, 0xA4	; 164
+ 3da:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
 	while ((TWCR & (1 << TWINT)) == 0);
- 1f8:	80 91 bc 00 	lds	r24, 0x00BC	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
- 1fc:	88 23       	and	r24, r24
- 1fe:	e4 f7       	brge	.-8      	; 0x1f8 <I2C_Start+0x6>
+ 3de:	80 91 bc 00 	lds	r24, 0x00BC	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 3e2:	88 23       	and	r24, r24
+ 3e4:	e4 f7       	brge	.-8      	; 0x3de <I2C_Start+0x6>
 }
- 200:	08 95       	ret
+ 3e6:	08 95       	ret
 
 Disassembly of section .text.I2C_Read_Nack:
 
-000001ca <I2C_Read_Nack>:
+0000039c <I2C_Read_Nack>:
 
 uint8_t I2C_Read_Nack(void) {
 	// Iniciar recepción sin devolver ACK
 	TWCR = (1 << TWINT) | (1 << TWEN);
- 1ca:	84 e8       	ldi	r24, 0x84	; 132
- 1cc:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 39c:	84 e8       	ldi	r24, 0x84	; 132
+ 39e:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
 	// Esperar a recibir el dato
 	while ((TWCR & (1 << TWINT)) == 0);
- 1d0:	80 91 bc 00 	lds	r24, 0x00BC	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
- 1d4:	88 23       	and	r24, r24
- 1d6:	e4 f7       	brge	.-8      	; 0x1d0 <I2C_Read_Nack+0x6>
+ 3a2:	80 91 bc 00 	lds	r24, 0x00BC	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 3a6:	88 23       	and	r24, r24
+ 3a8:	e4 f7       	brge	.-8      	; 0x3a2 <I2C_Read_Nack+0x6>
 	return TWDR;
- 1d8:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 3aa:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
 }
- 1dc:	08 95       	ret
+ 3ae:	08 95       	ret
 
 Disassembly of section .text.I2C_Read_Ack:
 
-000001de <I2C_Read_Ack>:
+000003b0 <I2C_Read_Ack>:
 
 uint8_t I2C_Read_Ack(void) {
 	// Iniciar recepción y devolver ACK seteando el bit TWEA
 	TWCR = (1 << TWINT) | (1 << TWEN) | (1 << TWEA);
- 1de:	84 ec       	ldi	r24, 0xC4	; 196
- 1e0:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 3b0:	84 ec       	ldi	r24, 0xC4	; 196
+ 3b2:	80 93 bc 00 	sts	0x00BC, r24	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
 	// Esperar a recibir el dato
 	while ((TWCR & (1 << TWINT)) == 0);
- 1e4:	80 91 bc 00 	lds	r24, 0x00BC	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
- 1e8:	88 23       	and	r24, r24
- 1ea:	e4 f7       	brge	.-8      	; 0x1e4 <I2C_Read_Ack+0x6>
+ 3b6:	80 91 bc 00 	lds	r24, 0x00BC	; 0x8000bc <__TEXT_REGION_LENGTH__+0x7f80bc>
+ 3ba:	88 23       	and	r24, r24
+ 3bc:	e4 f7       	brge	.-8      	; 0x3b6 <I2C_Read_Ack+0x6>
 	return TWDR;
- 1ec:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
- 1f0:	08 95       	ret
+ 3be:	80 91 bb 00 	lds	r24, 0x00BB	; 0x8000bb <__TEXT_REGION_LENGTH__+0x7f80bb>
+ 3c2:	08 95       	ret
 
 Disassembly of section .text.main:
 
-00000202 <main>:
+000002d6 <main>:
 // Vel. del relojo de I2C
 #define SCL_CLOCK 100000L
 
 int main(void)
 {
 	init_reloj(); // Inicializa el reloj
- 202:	0e 94 07 01 	call	0x20e	; 0x20e <init_reloj>
+ 2d6:	0e 94 f4 01 	call	0x3e8	; 0x3e8 <init_reloj>
+	uart_init();
+ 2da:	0e 94 e2 01 	call	0x3c4	; 0x3c4 <uart_init>
 	sei();
- 206:	78 94       	sei
-	
+ 2de:	78 94       	sei
+	uart_send_string("Sistema Iniciado. Esperando comandos...\r\n");
+ 2e0:	62 ec       	ldi	r22, 0xC2	; 194
+ 2e2:	70 e0       	ldi	r23, 0x00	; 0
+ 2e4:	80 e0       	ldi	r24, 0x00	; 0
+ 2e6:	0e 94 cf 00 	call	0x19e	; 0x19e <uart_send_string>
 	while(1)
     {		
 		reloj_foreground();
- 208:	0e 94 61 00 	call	0xc2	; 0xc2 <__data_load_end>
- 20c:	fd cf       	rjmp	.-6      	; 0x208 <main+0x6>
+ 2ea:	0e 94 81 00 	call	0x102	; 0x102 <reloj_foreground>
+		if (rx_ready == 1) {
+ 2ee:	80 91 aa 01 	lds	r24, 0x01AA	; 0x8001aa <rx_ready>
+ 2f2:	81 30       	cpi	r24, 0x01	; 1
+ 2f4:	d1 f7       	brne	.-12     	; 0x2ea <main+0x14>
+			// Ejemplo: si te mandan un comando por consola
+			// Pod�s hacer un strcmp(rx_buffer, "TEMP") o similar.
+			
+			uart_send_string("Comando recibido: ");
+ 2f6:	6c ee       	ldi	r22, 0xEC	; 236
+ 2f8:	70 e0       	ldi	r23, 0x00	; 0
+ 2fa:	80 e0       	ldi	r24, 0x00	; 0
+ 2fc:	0e 94 cf 00 	call	0x19e	; 0x19e <uart_send_string>
+			uart_send_string((char*)rx_buffer);
+ 300:	60 e0       	ldi	r22, 0x00	; 0
+ 302:	71 e0       	ldi	r23, 0x01	; 1
+ 304:	80 e8       	ldi	r24, 0x80	; 128
+ 306:	0e 94 cf 00 	call	0x19e	; 0x19e <uart_send_string>
+			uart_send_string("\r\n");
+ 30a:	6f ef       	ldi	r22, 0xFF	; 255
+ 30c:	70 e0       	ldi	r23, 0x00	; 0
+ 30e:	80 e0       	ldi	r24, 0x00	; 0
+ 310:	0e 94 cf 00 	call	0x19e	; 0x19e <uart_send_string>
+
+			rx_ready = 0; // Bajamos la bandera para esperar el pr�ximo comando
+ 314:	10 92 aa 01 	sts	0x01AA, r1	; 0x8001aa <rx_ready>
+ 318:	e8 cf       	rjmp	.-48     	; 0x2ea <main+0x14>
 
 Disassembly of section .text.init_reloj:
 
-0000020e <init_reloj>:
+000003e8 <init_reloj>:
 volatile uint8_t seg_dec	= 0;
 volatile uint8_t min_dec	= 0;
 volatile uint8_t horas_dec	= 0;
 
 void init_reloj(void) {
 	I2C_Init();
- 20e:	0e 94 cf 00 	call	0x19e	; 0x19e <I2C_Init>
+ 3e8:	0e 94 ad 01 	call	0x35a	; 0x35a <I2C_Init>
 	Timer1_Init();
- 212:	0e 94 af 00 	call	0x15e	; 0x15e <Timer1_Init>
- 216:	08 95       	ret
+ 3ec:	0e 94 8d 01 	call	0x31a	; 0x31a <Timer1_Init>
+ 3f0:	08 95       	ret
 
 Disassembly of section .text.reloj_foreground:
 
-000000c2 <reloj_foreground>:
+00000102 <reloj_foreground>:
 void reloj_foreground(void) {
 	static uint8_t	seg_raw = 0,
 					min_raw	= 0,
 					horas_raw = 0;
 					
 	if (flag_1seg == 1) {
-  c2:	80 91 06 01 	lds	r24, 0x0106	; 0x800106 <flag_1seg>
-  c6:	81 30       	cpi	r24, 0x01	; 1
-  c8:	09 f0       	breq	.+2      	; 0xcc <reloj_foreground+0xa>
-  ca:	48 c0       	rjmp	.+144    	; 0x15c <reloj_foreground+0x9a>
+ 102:	80 91 a6 01 	lds	r24, 0x01A6	; 0x8001a6 <flag_1seg>
+ 106:	81 30       	cpi	r24, 0x01	; 1
+ 108:	09 f0       	breq	.+2      	; 0x10c <reloj_foreground+0xa>
+ 10a:	48 c0       	rjmp	.+144    	; 0x19c <reloj_foreground+0x9a>
 		flag_1seg = 0;
-  cc:	10 92 06 01 	sts	0x0106, r1	; 0x800106 <flag_1seg>
+ 10c:	10 92 a6 01 	sts	0x01A6, r1	; 0x8001a6 <flag_1seg>
 		
 		// Se apunta al registro 0x00 (Segundos)
 		I2C_Start();
-  d0:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <I2C_Start>
+ 110:	0e 94 ec 01 	call	0x3d8	; 0x3d8 <I2C_Start>
 		I2C_Write(0xD0);
-  d4:	80 ed       	ldi	r24, 0xD0	; 208
-  d6:	0e 94 db 00 	call	0x1b6	; 0x1b6 <I2C_Write>
+ 114:	80 ed       	ldi	r24, 0xD0	; 208
+ 116:	0e 94 c4 01 	call	0x388	; 0x388 <I2C_Write>
 		I2C_Write(0x00);
-  da:	80 e0       	ldi	r24, 0x00	; 0
-  dc:	0e 94 db 00 	call	0x1b6	; 0x1b6 <I2C_Write>
+ 11a:	80 e0       	ldi	r24, 0x00	; 0
+ 11c:	0e 94 c4 01 	call	0x388	; 0x388 <I2C_Write>
 		
 		// Se cambia al modo lectura (Repeated Start)
 		I2C_Start();
-  e0:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <I2C_Start>
+ 120:	0e 94 ec 01 	call	0x3d8	; 0x3d8 <I2C_Start>
 		I2C_Write(0xD1);
-  e4:	81 ed       	ldi	r24, 0xD1	; 209
-  e6:	0e 94 db 00 	call	0x1b6	; 0x1b6 <I2C_Write>
+ 124:	81 ed       	ldi	r24, 0xD1	; 209
+ 126:	0e 94 c4 01 	call	0x388	; 0x388 <I2C_Write>
 		
 		seg_raw = I2C_Read_Ack();  // Lee 0x00
-  ea:	0e 94 ef 00 	call	0x1de	; 0x1de <I2C_Read_Ack>
-  ee:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <seg_raw.1634>
+ 12a:	0e 94 d8 01 	call	0x3b0	; 0x3b0 <I2C_Read_Ack>
+ 12e:	80 93 a2 01 	sts	0x01A2, r24	; 0x8001a2 <seg_raw.1663>
 		min_raw  = I2C_Read_Ack();  // Lee 0x01
-  f2:	0e 94 ef 00 	call	0x1de	; 0x1de <I2C_Read_Ack>
-  f6:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <min_raw.1635>
+ 132:	0e 94 d8 01 	call	0x3b0	; 0x3b0 <I2C_Read_Ack>
+ 136:	80 93 a1 01 	sts	0x01A1, r24	; 0x8001a1 <min_raw.1664>
 		horas_raw    = I2C_Read_Nack(); // Lee 0x02
-  fa:	0e 94 e5 00 	call	0x1ca	; 0x1ca <I2C_Read_Nack>
-  fe:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 13a:	0e 94 ce 01 	call	0x39c	; 0x39c <I2C_Read_Nack>
+ 13e:	80 93 a0 01 	sts	0x01A0, r24	; 0x8001a0 <horas_raw.1665>
 		
 		I2C_Stop();
- 102:	0e 94 0c 01 	call	0x218	; 0x218 <I2C_Stop>
+ 142:	0e 94 f9 01 	call	0x3f2	; 0x3f2 <I2C_Stop>
 		
 		// CONVERSIÓN DE BCD A DECIMAL
 		// Se tiene que los números estarán guardados de tal forma que los 4 bits altos son las decenas y los 4 bits bajos son las unidades.
 		seg_dec = ((seg_raw >> 4) & 0x0F) * 10 + (seg_raw & 0x0F);
- 106:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <seg_raw.1634>
- 10a:	98 2f       	mov	r25, r24
- 10c:	92 95       	swap	r25
- 10e:	9f 70       	andi	r25, 0x0F	; 15
- 110:	99 0f       	add	r25, r25
- 112:	29 2f       	mov	r18, r25
- 114:	22 0f       	add	r18, r18
- 116:	22 0f       	add	r18, r18
- 118:	92 0f       	add	r25, r18
- 11a:	8f 70       	andi	r24, 0x0F	; 15
- 11c:	89 0f       	add	r24, r25
- 11e:	80 93 05 01 	sts	0x0105, r24	; 0x800105 <seg_dec>
+ 146:	80 91 a2 01 	lds	r24, 0x01A2	; 0x8001a2 <seg_raw.1663>
+ 14a:	98 2f       	mov	r25, r24
+ 14c:	92 95       	swap	r25
+ 14e:	9f 70       	andi	r25, 0x0F	; 15
+ 150:	99 0f       	add	r25, r25
+ 152:	29 2f       	mov	r18, r25
+ 154:	22 0f       	add	r18, r18
+ 156:	22 0f       	add	r18, r18
+ 158:	92 0f       	add	r25, r18
+ 15a:	8f 70       	andi	r24, 0x0F	; 15
+ 15c:	89 0f       	add	r24, r25
+ 15e:	80 93 a5 01 	sts	0x01A5, r24	; 0x8001a5 <seg_dec>
 		min_dec = ((min_raw >> 4) & 0x0F) * 10  + (min_raw & 0x0F);
- 122:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <min_raw.1635>
- 126:	98 2f       	mov	r25, r24
- 128:	92 95       	swap	r25
- 12a:	9f 70       	andi	r25, 0x0F	; 15
- 12c:	99 0f       	add	r25, r25
- 12e:	29 2f       	mov	r18, r25
- 130:	22 0f       	add	r18, r18
- 132:	22 0f       	add	r18, r18
- 134:	92 0f       	add	r25, r18
- 136:	8f 70       	andi	r24, 0x0F	; 15
- 138:	89 0f       	add	r24, r25
- 13a:	80 93 04 01 	sts	0x0104, r24	; 0x800104 <min_dec>
+ 162:	80 91 a1 01 	lds	r24, 0x01A1	; 0x8001a1 <min_raw.1664>
+ 166:	98 2f       	mov	r25, r24
+ 168:	92 95       	swap	r25
+ 16a:	9f 70       	andi	r25, 0x0F	; 15
+ 16c:	99 0f       	add	r25, r25
+ 16e:	29 2f       	mov	r18, r25
+ 170:	22 0f       	add	r18, r18
+ 172:	22 0f       	add	r18, r18
+ 174:	92 0f       	add	r25, r18
+ 176:	8f 70       	andi	r24, 0x0F	; 15
+ 178:	89 0f       	add	r24, r25
+ 17a:	80 93 a4 01 	sts	0x01A4, r24	; 0x8001a4 <min_dec>
 		
 		// En el registro de horas, los bits 4 y 5 son las decenas. (El bit 6 es el formato 12/24h)
 		horas_dec = ((horas_raw >> 4) & 0x03) * 10 + (horas_raw & 0x0F);
- 13e:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
- 142:	98 2f       	mov	r25, r24
- 144:	92 95       	swap	r25
- 146:	9f 70       	andi	r25, 0x0F	; 15
- 148:	93 70       	andi	r25, 0x03	; 3
- 14a:	99 0f       	add	r25, r25
- 14c:	29 2f       	mov	r18, r25
- 14e:	22 0f       	add	r18, r18
- 150:	22 0f       	add	r18, r18
- 152:	92 0f       	add	r25, r18
- 154:	8f 70       	andi	r24, 0x0F	; 15
- 156:	89 0f       	add	r24, r25
- 158:	80 93 03 01 	sts	0x0103, r24	; 0x800103 <horas_dec>
- 15c:	08 95       	ret
+ 17e:	80 91 a0 01 	lds	r24, 0x01A0	; 0x8001a0 <horas_raw.1665>
+ 182:	98 2f       	mov	r25, r24
+ 184:	92 95       	swap	r25
+ 186:	9f 70       	andi	r25, 0x0F	; 15
+ 188:	93 70       	andi	r25, 0x03	; 3
+ 18a:	99 0f       	add	r25, r25
+ 18c:	29 2f       	mov	r18, r25
+ 18e:	22 0f       	add	r18, r18
+ 190:	22 0f       	add	r18, r18
+ 192:	92 0f       	add	r25, r18
+ 194:	8f 70       	andi	r24, 0x0F	; 15
+ 196:	89 0f       	add	r24, r25
+ 198:	80 93 a3 01 	sts	0x01A3, r24	; 0x8001a3 <horas_dec>
+ 19c:	08 95       	ret
 
 Disassembly of section .text.Timer1_Init:
 
-0000015e <Timer1_Init>:
+0000031a <Timer1_Init>:
 #include "timer1.h"
 
 volatile uint8_t flag_1seg = 0;
 
 void Timer1_Init(void) {
 	TCCR1B |= (1 << WGM12) | (1 << CS12);
- 15e:	e1 e8       	ldi	r30, 0x81	; 129
- 160:	f0 e0       	ldi	r31, 0x00	; 0
- 162:	80 81       	ld	r24, Z
- 164:	8c 60       	ori	r24, 0x0C	; 12
- 166:	80 83       	st	Z, r24
+ 31a:	e1 e8       	ldi	r30, 0x81	; 129
+ 31c:	f0 e0       	ldi	r31, 0x00	; 0
+ 31e:	80 81       	ld	r24, Z
+ 320:	8c 60       	ori	r24, 0x0C	; 12
+ 322:	80 83       	st	Z, r24
 	OCR1A = 62499;
- 168:	83 e2       	ldi	r24, 0x23	; 35
- 16a:	94 ef       	ldi	r25, 0xF4	; 244
- 16c:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7f8089>
- 170:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7f8088>
+ 324:	83 e2       	ldi	r24, 0x23	; 35
+ 326:	94 ef       	ldi	r25, 0xF4	; 244
+ 328:	90 93 89 00 	sts	0x0089, r25	; 0x800089 <__TEXT_REGION_LENGTH__+0x7f8089>
+ 32c:	80 93 88 00 	sts	0x0088, r24	; 0x800088 <__TEXT_REGION_LENGTH__+0x7f8088>
 	TIMSK1 |= (1 << OCIE1A);
- 174:	ef e6       	ldi	r30, 0x6F	; 111
- 176:	f0 e0       	ldi	r31, 0x00	; 0
- 178:	80 81       	ld	r24, Z
- 17a:	82 60       	ori	r24, 0x02	; 2
- 17c:	80 83       	st	Z, r24
- 17e:	08 95       	ret
+ 330:	ef e6       	ldi	r30, 0x6F	; 111
+ 332:	f0 e0       	ldi	r31, 0x00	; 0
+ 334:	80 81       	ld	r24, Z
+ 336:	82 60       	ori	r24, 0x02	; 2
+ 338:	80 83       	st	Z, r24
+ 33a:	08 95       	ret
 
 Disassembly of section .text.__vector_11:
 
-00000180 <__vector_11>:
+0000033c <__vector_11>:
 }
 
 // Rutina de Servicio de Interrupción
 ISR(TIMER1_COMPA_vect) {
- 180:	1f 92       	push	r1
- 182:	0f 92       	push	r0
- 184:	0f b6       	in	r0, 0x3f	; 63
- 186:	0f 92       	push	r0
- 188:	11 24       	eor	r1, r1
- 18a:	8f 93       	push	r24
+ 33c:	1f 92       	push	r1
+ 33e:	0f 92       	push	r0
+ 340:	0f b6       	in	r0, 0x3f	; 63
+ 342:	0f 92       	push	r0
+ 344:	11 24       	eor	r1, r1
+ 346:	8f 93       	push	r24
 	flag_1seg = 1; // Se levanta la bandera
- 18c:	81 e0       	ldi	r24, 0x01	; 1
- 18e:	80 93 06 01 	sts	0x0106, r24	; 0x800106 <flag_1seg>
+ 348:	81 e0       	ldi	r24, 0x01	; 1
+ 34a:	80 93 a6 01 	sts	0x01A6, r24	; 0x8001a6 <flag_1seg>
 }
- 192:	8f 91       	pop	r24
- 194:	0f 90       	pop	r0
- 196:	0f be       	out	0x3f, r0	; 63
- 198:	0f 90       	pop	r0
- 19a:	1f 90       	pop	r1
- 19c:	18 95       	reti
+ 34e:	8f 91       	pop	r24
+ 350:	0f 90       	pop	r0
+ 352:	0f be       	out	0x3f, r0	; 63
+ 354:	0f 90       	pop	r0
+ 356:	1f 90       	pop	r1
+ 358:	18 95       	reti
+
+Disassembly of section .text.uart_init:
+
+000003c4 <uart_init>:
+static volatile uint8_t tx_head = 0;
+static volatile uint8_t tx_tail = 0;
+
+void uart_init(void) {
+    // Configura BAUDRATE = 9600bps @ 16MHz
+    UBRR0L = 103; 
+ 3c4:	87 e6       	ldi	r24, 0x67	; 103
+ 3c6:	80 93 c4 00 	sts	0x00C4, r24	; 0x8000c4 <__TEXT_REGION_LENGTH__+0x7f80c4>
+    
+    // Activa Tx, Rx y la interrupción de recepción (RXCIE0).
+    // Nota: La interrupción UDRIE0 (TX) se activa SOLO cuando hay datos para enviar.
+    UCSR0B = (1 << TXEN0) | (1 << RXEN0) | (1 << RXCIE0);
+ 3ca:	88 e9       	ldi	r24, 0x98	; 152
+ 3cc:	80 93 c1 00 	sts	0x00C1, r24	; 0x8000c1 <__TEXT_REGION_LENGTH__+0x7f80c1>
+    
+    // Configura formato 8N1
+    UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);
+ 3d0:	86 e0       	ldi	r24, 0x06	; 6
+ 3d2:	80 93 c2 00 	sts	0x00C2, r24	; 0x8000c2 <__TEXT_REGION_LENGTH__+0x7f80c2>
+ 3d6:	08 95       	ret
+
+Disassembly of section .text.uart_send_string:
+
+0000019e <uart_send_string>:
+}
+
+void uart_send_string(const char *str) {
+ 19e:	cf 92       	push	r12
+ 1a0:	df 92       	push	r13
+ 1a2:	ef 92       	push	r14
+ 1a4:	6b 01       	movw	r12, r22
+ 1a6:	e8 2e       	mov	r14, r24
+    uint8_t i = 0;
+ 1a8:	20 e0       	ldi	r18, 0x00	; 0
+    
+    // 1. Cargar toda la cadena en el buffer circular de transmisión
+    while (str[i] != '\0') {
+ 1aa:	19 c0       	rjmp	.+50     	; 0x1de <uart_send_string+0x40>
+        uint8_t next_head = (tx_head + 1) % TX_BUFFER_SIZE;
+ 1ac:	80 91 a8 01 	lds	r24, 0x01A8	; 0x8001a8 <tx_head>
+ 1b0:	90 e0       	ldi	r25, 0x00	; 0
+ 1b2:	01 96       	adiw	r24, 0x01	; 1
+ 1b4:	8f 77       	andi	r24, 0x7F	; 127
+ 1b6:	90 78       	andi	r25, 0x80	; 128
+ 1b8:	99 23       	and	r25, r25
+ 1ba:	24 f4       	brge	.+8      	; 0x1c4 <uart_send_string+0x26>
+ 1bc:	01 97       	sbiw	r24, 0x01	; 1
+ 1be:	80 68       	ori	r24, 0x80	; 128
+ 1c0:	9f 6f       	ori	r25, 0xFF	; 255
+ 1c2:	01 96       	adiw	r24, 0x01	; 1
+        
+        // Espera de seguridad por si el buffer se llena (evita sobreescritura)
+        while (next_head == tx_tail); 
+ 1c4:	90 91 a7 01 	lds	r25, 0x01A7	; 0x8001a7 <tx_tail>
+ 1c8:	89 17       	cp	r24, r25
+ 1ca:	e1 f3       	breq	.-8      	; 0x1c4 <uart_send_string+0x26>
+        
+        tx_buffer[tx_head] = str[i];
+ 1cc:	e0 91 a8 01 	lds	r30, 0x01A8	; 0x8001a8 <tx_head>
+ 1d0:	f0 e0       	ldi	r31, 0x00	; 0
+ 1d2:	e0 5e       	subi	r30, 0xE0	; 224
+ 1d4:	fe 4f       	sbci	r31, 0xFE	; 254
+ 1d6:	30 83       	st	Z, r19
+        tx_head = next_head;
+ 1d8:	80 93 a8 01 	sts	0x01A8, r24	; 0x8001a8 <tx_head>
+        i++;
+ 1dc:	2f 5f       	subi	r18, 0xFF	; 255
+
+void uart_send_string(const char *str) {
+    uint8_t i = 0;
+    
+    // 1. Cargar toda la cadena en el buffer circular de transmisión
+    while (str[i] != '\0') {
+ 1de:	ae 2d       	mov	r26, r14
+ 1e0:	c6 01       	movw	r24, r12
+ 1e2:	82 0f       	add	r24, r18
+ 1e4:	91 1d       	adc	r25, r1
+ 1e6:	a1 1d       	adc	r26, r1
+ 1e8:	fc 01       	movw	r30, r24
+ 1ea:	34 91       	lpm	r19, Z
+ 1ec:	a7 fd       	sbrc	r26, 7
+ 1ee:	30 81       	ld	r19, Z
+ 1f0:	31 11       	cpse	r19, r1
+ 1f2:	dc cf       	rjmp	.-72     	; 0x1ac <uart_send_string+0xe>
+        i++;
+    }
+    
+    // 2. Activar la interrupción de "Registro de Datos Vacío" (UDRE)
+    // Esto dispara la interrupción inmediatamente para empezar a vaciar el buffer
+    UCSR0B |= (1 << UDRIE0);
+ 1f4:	e1 ec       	ldi	r30, 0xC1	; 193
+ 1f6:	f0 e0       	ldi	r31, 0x00	; 0
+ 1f8:	80 81       	ld	r24, Z
+ 1fa:	80 62       	ori	r24, 0x20	; 32
+ 1fc:	80 83       	st	Z, r24
+}
+ 1fe:	ef 90       	pop	r14
+ 200:	df 90       	pop	r13
+ 202:	cf 90       	pop	r12
+ 204:	08 95       	ret
+
+Disassembly of section .text.__vector_18:
+
+00000206 <__vector_18>:
+
+// --- Rutina de Servicio de Interrupción: Byte Recibido (RX) ---
+ISR(USART_RX_vect) {
+ 206:	1f 92       	push	r1
+ 208:	0f 92       	push	r0
+ 20a:	0f b6       	in	r0, 0x3f	; 63
+ 20c:	0f 92       	push	r0
+ 20e:	11 24       	eor	r1, r1
+ 210:	8f 93       	push	r24
+ 212:	9f 93       	push	r25
+ 214:	ef 93       	push	r30
+ 216:	ff 93       	push	r31
+    char data = UDR0;
+ 218:	80 91 c6 00 	lds	r24, 0x00C6	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7f80c6>
+
+    // Ignoramos el \n por si la consola envía \r\n
+    if (data != '\r' && data != '\n') {
+ 21c:	8d 30       	cpi	r24, 0x0D	; 13
+ 21e:	89 f0       	breq	.+34     	; 0x242 <__vector_18+0x3c>
+ 220:	8a 30       	cpi	r24, 0x0A	; 10
+ 222:	79 f0       	breq	.+30     	; 0x242 <__vector_18+0x3c>
+        if (rx_index < (RX_BUFFER_SIZE - 1)) {
+ 224:	90 91 a9 01 	lds	r25, 0x01A9	; 0x8001a9 <rx_index>
+ 228:	9f 31       	cpi	r25, 0x1F	; 31
+ 22a:	c0 f4       	brcc	.+48     	; 0x25c <__vector_18+0x56>
+            rx_buffer[rx_index++] = data;
+ 22c:	e0 91 a9 01 	lds	r30, 0x01A9	; 0x8001a9 <rx_index>
+ 230:	91 e0       	ldi	r25, 0x01	; 1
+ 232:	9e 0f       	add	r25, r30
+ 234:	90 93 a9 01 	sts	0x01A9, r25	; 0x8001a9 <rx_index>
+ 238:	f0 e0       	ldi	r31, 0x00	; 0
+ 23a:	e0 50       	subi	r30, 0x00	; 0
+ 23c:	ff 4f       	sbci	r31, 0xFF	; 255
+ 23e:	80 83       	st	Z, r24
+ 240:	0d c0       	rjmp	.+26     	; 0x25c <__vector_18+0x56>
+        }
+    } else if (data == '\r') {
+ 242:	8d 30       	cpi	r24, 0x0D	; 13
+ 244:	59 f4       	brne	.+22     	; 0x25c <__vector_18+0x56>
+        // Fin de línea detectado
+        rx_buffer[rx_index] = '\0'; // Terminador de string nulo
+ 246:	e0 91 a9 01 	lds	r30, 0x01A9	; 0x8001a9 <rx_index>
+ 24a:	f0 e0       	ldi	r31, 0x00	; 0
+ 24c:	e0 50       	subi	r30, 0x00	; 0
+ 24e:	ff 4f       	sbci	r31, 0xFF	; 255
+ 250:	10 82       	st	Z, r1
+        rx_index = 0;               // Resetea índice para el próximo comando
+ 252:	10 92 a9 01 	sts	0x01A9, r1	; 0x8001a9 <rx_index>
+        rx_ready = 1;               // Levanta bandera para el main()
+ 256:	81 e0       	ldi	r24, 0x01	; 1
+ 258:	80 93 aa 01 	sts	0x01AA, r24	; 0x8001aa <rx_ready>
+    }
+}
+ 25c:	ff 91       	pop	r31
+ 25e:	ef 91       	pop	r30
+ 260:	9f 91       	pop	r25
+ 262:	8f 91       	pop	r24
+ 264:	0f 90       	pop	r0
+ 266:	0f be       	out	0x3f, r0	; 63
+ 268:	0f 90       	pop	r0
+ 26a:	1f 90       	pop	r1
+ 26c:	18 95       	reti
+
+Disassembly of section .text.__vector_19:
+
+0000026e <__vector_19>:
+
+// --- Rutina de Servicio de Interrupción: Registro de Datos Vacío (TX) ---
+ISR(USART_UDRE_vect) {
+ 26e:	1f 92       	push	r1
+ 270:	0f 92       	push	r0
+ 272:	0f b6       	in	r0, 0x3f	; 63
+ 274:	0f 92       	push	r0
+ 276:	11 24       	eor	r1, r1
+ 278:	8f 93       	push	r24
+ 27a:	9f 93       	push	r25
+ 27c:	ef 93       	push	r30
+ 27e:	ff 93       	push	r31
+    // ¿Hay datos pendientes en el buffer circular?
+    if (tx_head != tx_tail) {
+ 280:	90 91 a8 01 	lds	r25, 0x01A8	; 0x8001a8 <tx_head>
+ 284:	80 91 a7 01 	lds	r24, 0x01A7	; 0x8001a7 <tx_tail>
+ 288:	98 17       	cp	r25, r24
+ 28a:	b9 f0       	breq	.+46     	; 0x2ba <__vector_19+0x4c>
+        UDR0 = tx_buffer[tx_tail]; // Transmite el byte
+ 28c:	e0 91 a7 01 	lds	r30, 0x01A7	; 0x8001a7 <tx_tail>
+ 290:	f0 e0       	ldi	r31, 0x00	; 0
+ 292:	e0 5e       	subi	r30, 0xE0	; 224
+ 294:	fe 4f       	sbci	r31, 0xFE	; 254
+ 296:	80 81       	ld	r24, Z
+ 298:	80 93 c6 00 	sts	0x00C6, r24	; 0x8000c6 <__TEXT_REGION_LENGTH__+0x7f80c6>
+        tx_tail = (tx_tail + 1) % TX_BUFFER_SIZE; // Avanza la cola
+ 29c:	80 91 a7 01 	lds	r24, 0x01A7	; 0x8001a7 <tx_tail>
+ 2a0:	90 e0       	ldi	r25, 0x00	; 0
+ 2a2:	01 96       	adiw	r24, 0x01	; 1
+ 2a4:	8f 77       	andi	r24, 0x7F	; 127
+ 2a6:	90 78       	andi	r25, 0x80	; 128
+ 2a8:	99 23       	and	r25, r25
+ 2aa:	24 f4       	brge	.+8      	; 0x2b4 <__vector_19+0x46>
+ 2ac:	01 97       	sbiw	r24, 0x01	; 1
+ 2ae:	80 68       	ori	r24, 0x80	; 128
+ 2b0:	9f 6f       	ori	r25, 0xFF	; 255
+ 2b2:	01 96       	adiw	r24, 0x01	; 1
+ 2b4:	80 93 a7 01 	sts	0x01A7, r24	; 0x8001a7 <tx_tail>
+ 2b8:	05 c0       	rjmp	.+10     	; 0x2c4 <__vector_19+0x56>
+    } else {
+        // Buffer vacío: Apagamos la interrupción para que no se dispare infinitamente
+        UCSR0B &= ~(1 << UDRIE0);
+ 2ba:	e1 ec       	ldi	r30, 0xC1	; 193
+ 2bc:	f0 e0       	ldi	r31, 0x00	; 0
+ 2be:	80 81       	ld	r24, Z
+ 2c0:	8f 7d       	andi	r24, 0xDF	; 223
+ 2c2:	80 83       	st	Z, r24
+    }
+ 2c4:	ff 91       	pop	r31
+ 2c6:	ef 91       	pop	r30
+ 2c8:	9f 91       	pop	r25
+ 2ca:	8f 91       	pop	r24
+ 2cc:	0f 90       	pop	r0
+ 2ce:	0f be       	out	0x3f, r0	; 63
+ 2d0:	0f 90       	pop	r0
+ 2d2:	1f 90       	pop	r1
+ 2d4:	18 95       	reti
+
+Disassembly of section .text.__dummy_fini:
+
+00000402 <_fini>:
+ 402:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+00000404 <__funcs_on_exit>:
+ 404:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+00000406 <__simulator_exit>:
+ 406:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+00000372 <exit>:
+ 372:	ec 01       	movw	r28, r24
+ 374:	0e 94 02 02 	call	0x404	; 0x404 <__funcs_on_exit>
+ 378:	0e 94 01 02 	call	0x402	; 0x402 <_fini>
+ 37c:	ce 01       	movw	r24, r28
+ 37e:	0e 94 03 02 	call	0x406	; 0x406 <__simulator_exit>
+ 382:	ce 01       	movw	r24, r28
+ 384:	0e 94 ff 01 	call	0x3fe	; 0x3fe <_Exit>
+
+Disassembly of section .text._Exit:
+
+000003fe <_Exit>:
+ 3fe:	0e 94 5f 00 	call	0xbe	; 0xbe <_exit>
