@@ -45,19 +45,21 @@ void uart_send_string(const char *str) {
 
 // --- Rutina de Servicio de Interrupción: Byte Recibido (RX) ---
 ISR(USART_RX_vect) {
-    char data = UDR0;
+	char data = UDR0;
 
-    // Ignoramos el \n por si la consola envía \r\n
-    if (data != '\r' && data != '\n') {
-        if (rx_index < (RX_BUFFER_SIZE - 1)) {
-            rx_buffer[rx_index++] = data;
-        }
-    } else if (data == '\r') {
-        // Fin de línea detectado
-        rx_buffer[rx_index] = '\0'; // Terminador de string nulo
-        rx_index = 0;               // Resetea índice para el próximo comando
-        rx_ready = 1;               // Levanta bandera para el main()
-    }
+	if (data == '\b' || data == 127) {
+		if (rx_index > 0) {
+			rx_index--;
+		}
+		} else if (data != '\r' && data != '\n') {
+		if (rx_index < (RX_BUFFER_SIZE - 1)) {
+			rx_buffer[rx_index++] = data;
+		}
+		} else if ((data == '\r' || data == '\n') && rx_index > 0) {
+		rx_buffer[rx_index] = '\0';
+		rx_index = 0;
+		rx_ready = 1;
+	}
 }
 
 // --- Rutina de Servicio de Interrupción: Registro de Datos Vacío (TX) ---
