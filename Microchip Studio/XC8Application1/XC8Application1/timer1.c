@@ -8,6 +8,7 @@
 #include "timer1.h"
 
 volatile uint8_t flag_1seg = 0;
+volatile uint8_t flag_1seg_monitor = 0;
 
 void Timer1_Init(void) {
 	TCCR1B |= (1 << WGM12) | (1 << CS12);
@@ -18,4 +19,5 @@ void Timer1_Init(void) {
 // Rutina de Servicio de Interrupción
 ISR(TIMER1_COMPA_vect) {
 	flag_1seg = 1; // Se levanta la bandera
+	flag_1seg_monitor = 1; // Idem.
 }

@@ -12,6 +12,9 @@
 #include <avr/interrupt.h>
 #define F_CPU 16000000UL
 #define SCL_CLOCK 100000L // Vel. del reloj de I2C
+#define I2C_TIMEOUT_LIMIT 10000
+
+extern volatile uint8_t i2c_error;
 
 void I2C_Stop(void);
 void I2C_Write(uint8_t data);

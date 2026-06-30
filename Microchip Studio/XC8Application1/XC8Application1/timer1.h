@@ -13,6 +13,7 @@
 #include <avr/interrupt.h>
 
 extern volatile uint8_t flag_1seg;
+extern volatile uint8_t flag_1seg_monitor;
 
 void timer1_init(void);
 

@@ -16,6 +16,8 @@ extern volatile uint8_t	seg_dec;
 extern volatile uint8_t	min_dec;
 extern volatile uint8_t	horas_dec;
 
+extern volatile uint8_t error_reloj;
+
 void Timer1_Init(void);
 void init_reloj(void);
 void reloj_foreground(void);

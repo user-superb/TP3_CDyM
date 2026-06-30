@@ -13,6 +13,8 @@ volatile uint8_t seg_dec	= 0;
 volatile uint8_t min_dec	= 0;
 volatile uint8_t horas_dec	= 0;
 
+volatile uint8_t error_reloj = 0;
+
 void init_reloj(void) {
 	I2C_Init();
 	Timer1_Init();
@@ -25,6 +27,7 @@ void reloj_foreground(void) {
 					
 	if (flag_1seg == 1) {
 		flag_1seg = 0;
+		i2c_error = 0;
 		
 		// Se apunta al registro 0x00 (Segundos)
 		I2C_Start();
@@ -40,6 +43,13 @@ void reloj_foreground(void) {
 		horas_raw    = I2C_Read_Nack(); // Lee 0x02
 		
 		I2C_Stop();
+		
+		if (i2c_error == 1) {
+			error_reloj = 1;
+			return;
+		}
+		
+		error_reloj = 0;
 		
 		// CONVERSIÓN DE BCD A DECIMAL
 		// Se tiene que los números estarán guardados de tal forma que los 4 bits altos son las decenas y los 4 bits bajos son las unidades.
